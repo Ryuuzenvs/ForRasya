@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun Rasya!</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        body {
+    margin: 0;
+    background-color: #222;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+    color: white;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    /* Menambahkan shadow untuk efek 3D */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+margin-left: 35%;
+margin-top: 40%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s ease-in-out;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+margin-left: 15%;
+}
+    </style>
+</head>
+<body>
+    <button id="myButton">Tekan ini dong</button>
+<br><p></p>
+    <h1 id="greeting" class="hidden">Selamat Ulang Tahun, Rasya!</h1>
+
+    <script>
+        const button = document.getElementById('myButton');
+        const greeting = document.getElementById('greeting');
+
+        button.addEventListener('click', () => {
+            button.classList.add('hidden');
+            greeting.classList.remove('hidden');
+            greeting.classList.add('show');
+        });
+    </script>
+</body>
+</html>
